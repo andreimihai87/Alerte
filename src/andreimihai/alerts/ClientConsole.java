@@ -1,6 +1,6 @@
 package andreimihai.alerts;
 
-public class ClientConsola {
+public class ClientConsole {
 
 	public static void main(String[] args) {
 		

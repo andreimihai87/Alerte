@@ -2,26 +2,18 @@ package andreimihai.alerts;
 
 public class Manager {
 
-	void adaugaCategorie(Categorii cat){
-		
-		
+	void addCategory(Category cat){
 		
 	}
 	
-	void adaugaAlerta(Alerta alert){
-		
-		
+	void addAlert(Alert alert){
 		
 	}
 	
-	void vizualizareCategorii(){
-		
-		
+	void viewCategories(){
 		
 	}
-	void vizualizareAlerte() {
-		
-		
+	void viewAlerts() {
 		
 	}
 
