@@ -5,14 +5,14 @@ public class Alert {
 	private String title;
 	private String otherInfo;
 	private String data;
-	private String nameCat;
 	
+	Category cat;
 	
 
-	public Alert(String title, String nameCat, String otherInfo, String data){
+	public Alert(String title, Category cat, String otherInfo, String data){
 		
 		this.title = title;
-		this.nameCat = nameCat;
+		this.cat = cat;
 		this.otherInfo = otherInfo;
 		this.data = data;
 		
@@ -31,14 +31,13 @@ public class Alert {
 	}
 	
 	public String getCategory(){
-		
-		return nameCat;
+		return cat.getName();
 	}
 	
 	public String toString(){
 		
 		String oneAlert;
-		oneAlert = "Alerta:\t" + title + "\t" + nameCat + "\t" + otherInfo + "\t" + data;
+		oneAlert = "Alerta:\t" + title + "\t" + getCategory() + "\t" + otherInfo + "\t" + data;
 		
 		//nu mai stiu care e faza cu title, la ce am nevoie de el?
 		
