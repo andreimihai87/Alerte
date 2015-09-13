@@ -2,15 +2,15 @@ package andreimihai.alerts;
 
 public class Category {
 
-	String name;
+	private String name;
 	
-	Category(String name){
+	public Category(String name){
 		
 		this.name = name;
 		
 	}
 	
-	String getName(){
+	public String getName(){
 		
 		return name;
 	}

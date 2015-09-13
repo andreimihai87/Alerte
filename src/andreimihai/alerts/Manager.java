@@ -2,18 +2,18 @@ package andreimihai.alerts;
 
 public class Manager {
 
-	void addCategory(Category cat){
+	public void addCategory(Category cat){
 		
 	}
 	
-	void addAlert(Alert alert){
+	public void addAlert(Alert alert){
 		
 	}
 	
-	void viewCategories(){
+	public void viewCategories(){
 		
 	}
-	void viewAlerts() {
+	public void viewAlerts() {
 		
 	}
 

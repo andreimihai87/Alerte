@@ -4,8 +4,8 @@ import java.util.Date;
 
 public class Alert {
 
-	String title;
-	String otherInfo;
-	Date date = new Date();
+	private String title;
+	private String otherInfo;
+	private Date date = new Date();
 	
 }
