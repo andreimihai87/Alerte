@@ -1,4 +1,6 @@
-package andreimihai.alerts;
+package andreimihai.alerts.test;
+
+import andreimihai.alerts.Category;
 
 public class ClientConsole {
 
