@@ -6,7 +6,7 @@ public class Alert {
 	private String otherInfo;
 	private String data;
 	private String nameCat;
-	private String oneAlert;
+	
 	
 
 	public Alert(String title, String nameCat, String otherInfo, String data){
@@ -37,6 +37,7 @@ public class Alert {
 	
 	public String toString(){
 		
+		String oneAlert;
 		oneAlert = "Alerta:\t" + title + "\t" + nameCat + "\t" + otherInfo + "\t" + data;
 		
 		//nu mai stiu care e faza cu title, la ce am nevoie de el?
