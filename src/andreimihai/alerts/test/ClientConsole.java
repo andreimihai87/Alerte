@@ -1,8 +1,8 @@
 package andreimihai.alerts.test;
 
 import andreimihai.alerts.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
 
 public class ClientConsole {
 
@@ -15,11 +15,9 @@ public class ClientConsole {
 		Manager allStuff = new Manager();
 		
 		Category oneCategory = new Category("Buletin");
-		
-		allStuff.addCategory(oneCategory);
-		
 		Category secondCategory = new Category("Permis");
 		
+		allStuff.addCategory(oneCategory);
 		allStuff.addCategory(secondCategory);
 		//allStuff.addCategory(secondCategory);
 		//am testat sa vad daca se mai adauga inca una
@@ -29,9 +27,6 @@ public class ClientConsole {
 		
 		Alert firstAlert = new Alert("Ceva", oneCategory, "Mihai", "28-09-2015");
 		Alert secondAlert = new Alert("Titlu?", oneCategory, "Dan", "25-10-2015");
-		
-		
-
 		
 		System.out.println(firstAlert);
 		System.out.println(secondAlert);
