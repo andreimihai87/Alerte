@@ -6,7 +6,7 @@ public class Alert {
 	private String otherInfo;
 	private String data;
 	
-	Category cat;
+	private Category cat;
 	
 
 	public Alert(String title, Category cat, String otherInfo, String data){
