@@ -25,7 +25,7 @@ public class ClientConsole {
 		System.out.println(oneCategory.getName());
 		System.out.println(secondCategory.getName());
 		
-		Alert firstAlert = new Alert("Ceva", oneCategory, "Mihai", "28-09-2015");
+		Alert firstAlert = new Alert("Ceva", oneCategory, "Mihai", "25-09-2015");
 		Alert secondAlert = new Alert("Titlu?", oneCategory, "Dan", "25-10-2015");
 		
 		System.out.println(firstAlert);

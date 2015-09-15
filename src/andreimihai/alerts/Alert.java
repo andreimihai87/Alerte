@@ -1,20 +1,23 @@
 package andreimihai.alerts;
 
+import java.util.Date;
+
 public class Alert {
 
 	private String title;
 	private String otherInfo;
-	private String data;
+	private String dataAsString;
+	private Date data = new Date();
 	
 	private Category cat;
 	
 
-	public Alert(String title, Category cat, String otherInfo, String data){
+	public Alert(String title, Category cat, String otherInfo, String dataAsString){
 		
 		this.title = title;
 		this.cat = cat;
 		this.otherInfo = otherInfo;
-		this.data = data;
+		this.dataAsString = dataAsString;
 		
 	}
 	
@@ -27,7 +30,7 @@ public class Alert {
 	}
 	
 	public String getData(){
-		return data;
+		return dataAsString;
 	}
 	
 	public String getCategory(){
@@ -37,7 +40,7 @@ public class Alert {
 	public String toString(){
 		
 		String oneAlert;
-		oneAlert = "Alerta:\t" + title + "\t" + getCategory() + "\t" + otherInfo + "\t" + data;
+		oneAlert = "Alerta:\t" + title + "\t" + getCategory() + "\t" + otherInfo + "\t" + dataAsString;
 		
 		//nu mai stiu care e faza cu title, la ce am nevoie de el?
 		
