@@ -31,8 +31,7 @@ public class MainWindow extends JFrame {
 	}
 	
 	private void loadSomething() {
-		//add(new WindowAbout(), BorderLayout.CENTER);
-		//add(new WindowAddAlert());
+		add(new WindowAbout(), BorderLayout.CENTER);
 		
 	}
 
