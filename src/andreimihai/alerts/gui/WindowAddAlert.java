@@ -4,10 +4,17 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import andreimihai.alerts.Alert;
+import andreimihai.alerts.Category;
+
 public class WindowAddAlert extends JPanel {
 	
 	JLabel messages;
 	JButton addAlert;
+	JTextField catText, anotherInfoText, dateText;
+	
+	Category categ;
+	Alert newAlert;
 	
 	public WindowAddAlert() {
 		
@@ -24,7 +31,7 @@ public class WindowAddAlert extends JPanel {
 		cat.setBounds(10, 10, 100, 20);
 		add(cat);
 				
-		JTextField catText = new JTextField();
+		catText = new JTextField();
 		catText.setBounds(10, 40, 80, 20);
 		add(catText);
 		
@@ -33,7 +40,7 @@ public class WindowAddAlert extends JPanel {
 		anotherInfo.setBounds(130, 10, 100, 20);
 		add(anotherInfo);
 				
-		JTextField anotherInfoText = new JTextField();
+		anotherInfoText = new JTextField();
 		anotherInfoText.setBounds(130, 40, 120, 20);
 		add(anotherInfoText);
 		
@@ -42,7 +49,7 @@ public class WindowAddAlert extends JPanel {
 		date.setBounds(280, 10, 100, 20);
 		add(date);
 				
-		JTextField dateText = new JTextField();
+		dateText = new JTextField();
 		dateText.setBounds(280, 40, 100, 20);
 		add(dateText);
 		
@@ -56,7 +63,16 @@ public class WindowAddAlert extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				messages.setText("Alerta Adaugata");
+				dateText.getText();
+				
+				categ = new Category(catText.getText());
+				
+				newAlert = new Alert("title", categ, anotherInfoText.getText(), dateText.getText());
+				
+				//System.out.println(newAlert);
+				
 			}
+			
 		});
 		
 	}
