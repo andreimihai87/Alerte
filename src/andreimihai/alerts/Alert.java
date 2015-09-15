@@ -12,13 +12,14 @@ public class Alert {
 	private Category cat;
 	
 
-	public Alert(String title, Category cat, String otherInfo, String dataAsString){
+	public Alert(String title, Category cat, String otherInfo, Date date) {
 		
 		this.title = title;
 		this.cat = cat;
 		this.otherInfo = otherInfo;
-		this.dataAsString = dataAsString;
+//		this.dataAsString = dataAsString;
 		
+		this.data = date;
 	}
 	
 	public String getTitle(){
@@ -29,8 +30,12 @@ public class Alert {
 		return otherInfo;
 	}
 	
-	public String getData(){
-		return dataAsString;
+//	public String getData(){
+//		return dataAsString;
+//	}
+	
+	public Date getDate() {
+		return data;
 	}
 	
 	public String getCategory(){

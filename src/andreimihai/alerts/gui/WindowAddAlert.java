@@ -1,11 +1,18 @@
 package andreimihai.alerts.gui;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Date;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 import andreimihai.alerts.Alert;
 import andreimihai.alerts.Category;
+import andreimihai.alerts.Manager;
 
 public class WindowAddAlert extends JPanel {
 	
@@ -45,7 +52,7 @@ public class WindowAddAlert extends JPanel {
 		add(anotherInfoText);
 		
 		//date label + date box
-		JLabel date = new JLabel("Data");
+		JLabel date = new JLabel("Data (yyyy-MM-dd)");
 		date.setBounds(280, 10, 100, 20);
 		add(date);
 				
@@ -63,11 +70,20 @@ public class WindowAddAlert extends JPanel {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				messages.setText("Alerta Adaugata");
-				dateText.getText();
-				
+								
 				categ = new Category(catText.getText());
 				
-				newAlert = new Alert("title", categ, anotherInfoText.getText(), dateText.getText());
+				Date dateAsDate = null;
+				String dateAsString = dateText.getText();
+				/*
+				 * ceva cod care face din dAS, dAD
+				 */
+				
+				newAlert = new Alert("title", categ, anotherInfoText.getText(), dateAsDate);
+				
+				Manager.INSTANCE.addAlert(newAlert);
+//				manager.add ...
+				// clear fields
 				
 				//System.out.println(newAlert);
 				

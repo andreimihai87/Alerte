@@ -2,8 +2,10 @@ package andreimihai.alerts;
 
 import java.util.ArrayList;
 
-public class Manager {
+public enum Manager {
 
+	INSTANCE;
+	
 	private ArrayList<Category> categoryList = new ArrayList<Category>();
 	private ArrayList<Alert> alertList = new ArrayList<Alert>();
 	
