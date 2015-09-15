@@ -65,6 +65,14 @@ public class MainWindow extends JFrame {
 			}
 		});
 		
+		JMenuItem openAddAlert = new JMenuItem("Add Alert");
+		openAddAlert.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				loadWindowAddAlert();
+			}
+		});
+		
 		JMenuItem exit = new JMenuItem("Exit");
 		exit.addActionListener(new ActionListener() {
 			@Override
@@ -74,6 +82,7 @@ public class MainWindow extends JFrame {
 		});
 		
 		menu.add(openCategories);
+		menu.add(openAddAlert);
 		menu.addSeparator();
 		menu.add(openAbout);
 		menu.add(exit);
@@ -84,6 +93,16 @@ public class MainWindow extends JFrame {
 			remove(current);
 		}
 		current = new WindowAbout();
+		add(current, BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+	
+	private void loadWindowAddAlert() {
+		if (current != null) {
+			remove(current);
+		}
+		current = new WindowAddAlert();
 		add(current, BorderLayout.CENTER);
 		revalidate();
 		repaint();
