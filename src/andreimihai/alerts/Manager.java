@@ -9,9 +9,9 @@ public enum Manager {
 	private ArrayList<Category> categoryList = new ArrayList<Category>();
 	private ArrayList<Alert> alertList = new ArrayList<Alert>();
 	
-	private ArrayList<IManagerObserver> observerList;
+	private ArrayList<IManagerObserver> observerList = new ArrayList<IManagerObserver>();
 	
-	void addIManagerObserver(IManagerObserver observer){
+	public void addIManagerObserver(IManagerObserver observer){
 		observerList.add(observer);
 	}
 	
@@ -23,6 +23,15 @@ public enum Manager {
 	
 	public void addAlert(Alert alert){
 		alertList.add(alert);
+		
+		for(int i=0; i<observerList.size(); i++){
+			observerList.get(i).alertsUpdate();
+		}
+		
+		for (IManagerObserver observer : observerList) {
+//			observer.alertsUpdate();
+		}
+		
 	}
 	
 	public void viewCategories(){
