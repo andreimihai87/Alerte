@@ -9,6 +9,12 @@ public enum Manager {
 	private ArrayList<Category> categoryList = new ArrayList<Category>();
 	private ArrayList<Alert> alertList = new ArrayList<Alert>();
 	
+	private ArrayList<IManagerObserver> observerList;
+	
+	void addIManagerObserver(IManagerObserver observer){
+		observerList.add(observer);
+	}
+	
 	public void addCategory(Category cat){
 		if(!categoryList.contains(cat)){
 			categoryList.add(cat);
