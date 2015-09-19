@@ -38,14 +38,14 @@ public class Alert {
 		return data;
 	}
 	
-	public String getCategory(){
-		return cat.getName();
+	public Category getCategory(){
+		return cat;
 	}
 	
 	public String toString(){
 		
 		String oneAlert;
-		oneAlert = "Alerta:\t" + title + "\t" + getCategory() + "\t" + otherInfo + "\t" + dataAsString;
+		oneAlert = "Alerta:\t" + title + "\t" + cat.getName() + "\t" + otherInfo + "\t" + dataAsString;
 		
 		//nu mai stiu care e faza cu title, la ce am nevoie de el?
 		
