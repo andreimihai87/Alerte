@@ -30,21 +30,25 @@ public class WindowViewAlerts extends JPanel {
 		
 		add(container, BorderLayout.CENTER);
 		
-		
 		// Controller
 		Manager.INSTANCE.addIManagerObserver(new IManagerObserver() {
 			@Override
 			public void alertsUpdate() {
-				final List<Alert> alerts = Manager.INSTANCE.getAlertsAll();
-				
-				SwingUtilities.invokeLater(new Runnable() {
-					@Override
-					public void run() {
-						model.setAlertsAll(alerts);
-					}
-				});
+				allAllAlertsToModel();
+			}
+		});
+		
+		allAllAlertsToModel();
+	}
+	
+	private void allAllAlertsToModel() {
+		final List<Alert> alerts = Manager.INSTANCE.getAlertsAll();
+		
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				model.setAlertsAll(alerts);
 			}
 		});
 	}
-	
 }
