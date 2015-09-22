@@ -32,6 +32,9 @@ public class ClientConsole {
 		Alert firstAlert = new Alert("Ceva", oneCategory, "Mihai", data);
 		Alert secondAlert = new Alert("Titlu?", oneCategory, "Dan", data);
 		
+		TestIManagerObserver oneObserver = new TestIManagerObserver();
+		Manager.INSTANCE.addIManagerObserver(oneObserver);
+		
 		allStuff.addAlert(firstAlert);
 		allStuff.addAlert(secondAlert);
 		
@@ -45,8 +48,7 @@ public class ClientConsole {
 		
 		//allStuff.viewCategories();
 		
-		TestIManagerObserver oneObserver = new TestIManagerObserver();
-		oneObserver.alertsUpdate();
+		
 
 	}
 
