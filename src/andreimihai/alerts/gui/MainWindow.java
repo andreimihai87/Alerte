@@ -15,6 +15,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import andreimihai.alerts.gui.alertstable.*;
+
 /**
  *
  */
@@ -73,6 +75,14 @@ public class MainWindow extends JFrame {
 			}
 		});
 		
+		JMenuItem openViewAlerts = new JMenuItem("View Alerts");
+		openAddAlert.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				loadWindowViewAlers();
+			}
+		});
+		
 		JMenuItem exit = new JMenuItem("Exit");
 		exit.addActionListener(new ActionListener() {
 			@Override
@@ -83,6 +93,7 @@ public class MainWindow extends JFrame {
 		
 		menu.add(openCategories);
 		menu.add(openAddAlert);
+		menu.add(openViewAlerts);
 		menu.addSeparator();
 		menu.add(openAbout);
 		menu.add(exit);
@@ -103,6 +114,16 @@ public class MainWindow extends JFrame {
 			remove(current);
 		}
 		current = new WindowAddAlert();
+		add(current, BorderLayout.CENTER);
+		revalidate();
+		repaint();
+	}
+	
+	private void loadWindowViewAlers() {
+		if (current != null) {
+			remove(current);
+		}
+		current = new WindowViewAlerts();
 		add(current, BorderLayout.CENTER);
 		revalidate();
 		repaint();

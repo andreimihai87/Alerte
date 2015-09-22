@@ -1,6 +1,7 @@
 package andreimihai.alerts.gui.alertstable;
 
 import java.awt.BorderLayout;
+import java.util.List;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -34,7 +35,7 @@ public class WindowViewAlerts extends JPanel {
 		Manager.INSTANCE.addIManagerObserver(new IManagerObserver() {
 			@Override
 			public void alertsUpdate() {
-				List<Alert> alerts = Manager.INSTANCE.getAlertsAll();
+				final List<Alert> alerts = Manager.INSTANCE.getAlertsAll();
 				
 				SwingUtilities.invokeLater(new Runnable() {
 					@Override
