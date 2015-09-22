@@ -76,10 +76,10 @@ public class MainWindow extends JFrame {
 		});
 		
 		JMenuItem openViewAlerts = new JMenuItem("View Alerts");
-		openAddAlert.addActionListener(new ActionListener() {
+		openViewAlerts.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				loadWindowViewAlers();
+				loadWindowViewAlerts();
 			}
 		});
 		
@@ -119,7 +119,7 @@ public class MainWindow extends JFrame {
 		repaint();
 	}
 	
-	private void loadWindowViewAlers() {
+	private void loadWindowViewAlerts() {
 		if (current != null) {
 			remove(current);
 		}
