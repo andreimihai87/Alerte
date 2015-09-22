@@ -7,6 +7,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 
+import andreimihai.alerts.Alert;
 import andreimihai.alerts.IManagerObserver;
 import andreimihai.alerts.Manager;
 
@@ -33,12 +34,12 @@ public class WindowViewAlerts extends JPanel {
 		Manager.INSTANCE.addIManagerObserver(new IManagerObserver() {
 			@Override
 			public void alertsUpdate() {
-//				List<Alert> alerts = Manager.INSTANCE.getAlertsAll();
+				List<Alert> alerts = Manager.INSTANCE.getAlertsAll();
 				
 				SwingUtilities.invokeLater(new Runnable() {
 					@Override
 					public void run() {
-//						model.setAlertsAll(alerts);
+						model.setAlertsAll(alerts);
 					}
 				});
 			}

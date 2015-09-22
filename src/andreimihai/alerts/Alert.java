@@ -45,7 +45,7 @@ public class Alert {
 	public String toString(){
 		
 		String oneAlert;
-		oneAlert = "Alerta:\t" + title + "\t" + cat.getName() + "\t" + otherInfo + "\t" + dataAsString;
+		oneAlert = title + "\t" + cat.getName() + "\t" + otherInfo + "\t" + dataAsString;
 		
 		//nu mai stiu care e faza cu title, la ce am nevoie de el?
 		

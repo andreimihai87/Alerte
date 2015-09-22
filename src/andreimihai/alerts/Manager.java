@@ -23,26 +23,18 @@ public enum Manager {
 	
 	public void addAlert(Alert alert){
 		alertList.add(alert);
-		
-		for(int i=0; i<observerList.size(); i++){
-			observerList.get(i).alertsUpdate();
-		}
-		
+
 		for (IManagerObserver observer : observerList) {
-//			observer.alertsUpdate();
+			observer.alertsUpdate();
 		}
-		
 	}
 	
-	public void viewCategories(){
-		for(int i=0; i<categoryList.size(); i++){
-			System.out.println(categoryList.get(i).getName());
-		}
+	public ArrayList<Alert> getAlertsAll(){
+		return alertList;
 	}
-	public void viewAlerts() {
-		
+	
+	public ArrayList<Category> getCategorysAll(){
+		return categoryList;
 	}
 
-	
-	
 }
